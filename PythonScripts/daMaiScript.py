@@ -8,9 +8,11 @@ from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 
 if __name__ == '__main__':
-
+    #chrome.exe --remote-debugging-port=9223 --user-data-dir="D:\selenium\ChromeProfile9223"
+    #--remote-debugging-port=9222 --user-data-dir="D:\selenium\ChromeProfile"
     url = 'https://www.damai.cn'
     chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9223")
     chrome_options.add_experimental_option("detach", True)  # 设置程序结束后不会关闭浏览器
     browser = webdriver.Chrome(options=chrome_options)
     browser.maximize_window()
@@ -43,8 +45,8 @@ if __name__ == '__main__':
     actions.move_to_element(span).perform()
     actions.click_and_hold().perform()
     time.sleep(1)
-    actions.move_by_offset(300,0).perform()
-    actions.release().perform()
+    actions.move_by_offset(290,0).perform()
+    #actions.release().perform()
 
 
     #找不到输入框
