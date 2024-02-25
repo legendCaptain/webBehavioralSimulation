@@ -17,11 +17,11 @@ if __name__ == '__main__':
     connect_time = time.time()
     #1.开启远程调试浏览器
     # chrome.exe --remote-debugging-port=9222 --user-data-dir="E:\selenium\ChromeProfile"
-    #chrome.exe --remote-debugging-port=9223 --user-data-dir="D:\selenium\ChromeProfile9223
+    #chrome.exe --remote-debugging-port=9223 --user-data-dir="D:\selenium\ChromeProfile9223"
     chrome_options = Options()
     chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9223")
     browser = webdriver.Chrome(options=chrome_options)
-    #yin
+
     browser.implicitly_wait(10)
     connect_finish_time = time.time()
 
